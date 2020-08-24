@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <HBox alignment="CENTER" prefHeight="48.0" prefWidth="600.0">
+         <children>
+            <Label text="TRIP EXPENSE PLANNER">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="55.0" prefWidth="672.0" spacing="10.0">
+         <children>
+            <Label text="Enter your budget:">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="textUserBudget" prefHeight="25.0" prefWidth="116.0" promptText="Budget" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="120.0" prefWidth="672.0" spacing="15.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="90.0" prefWidth="121.0" spacing="10.0">
+               <children>
+                  <Label text="Transportation">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="transportChoiceBox" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="91.0" prefWidth="121.0" spacing="5.0">
+               <children>
+                  <Label text="Amount:" />
+                  <TextField fx:id="textGetTransportationAmount" promptText="Amount" />
+                  <Button fx:id="btnAddTransportationAmount" mnemonicParsing="false" onAction="#addTransportationAmount" onMouseClicked="#checkMoneySpent" text="Add" />
+               </children>
+            </VBox>
+            <VBox prefHeight="120.0" prefWidth="85.0" />
+            <VBox alignment="CENTER" prefHeight="90.0" prefWidth="120.0" spacing="10.0">
+               <children>
+                  <Label text="Lodging">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="lodgingChoiceBox" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="91.0" prefWidth="122.0" spacing="5.0">
+               <children>
+                  <Label text="Amount:" />
+                  <TextField fx:id="textGetLodgingAmount" promptText="Amount" />
+                  <Button fx:id="btnAddLodgingAmount" mnemonicParsing="false" onAction="#addLodgingAmount" onMouseClicked="#checkMoneySpent" text="Add" />
+               </children></VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="121.0" prefWidth="672.0" spacing="15.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+               <children>
+                  <Label text="Food">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="foodChoiceBox" prefWidth="150.0" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+               <children>
+                  <Label text="Amount:" />
+                  <TextField fx:id="textGetFoodAmount" promptText="Amount" />
+                  <Button fx:id="btnAddFoodAmount" mnemonicParsing="false" onAction="#addFoodAmount" onMouseClicked="#checkMoneySpent" text="Add" />
+               </children></VBox>
+            <VBox prefHeight="96.0" prefWidth="134.0" />
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Miscellaneous">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="96.0" prefWidth="94.0" spacing="5.0">
+               <children>
+                  <Label text="Amount:" />
+                  <TextField fx:id="textGetMiscellaneousAmount" prefHeight="25.0" prefWidth="90.0" promptText="Amount" />
+                  <Button fx:id="btnAddMiscellaneousAmount" mnemonicParsing="false" onAction="#addMiscellaneousAmount" onMouseClicked="#checkMoneySpent" text="Add" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="86.0" prefWidth="672.0" spacing="8.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="86.0" prefWidth="176.0">
+               <children>
+                  <Label text="Amount of money spent:   $">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" prefHeight="86.0" prefWidth="61.0">
+               <children>
+                  <Label fx:id="lblMoneySpent" text="0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox prefHeight="86.0" prefWidth="149.0" />
+            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#saveExpenses" text="Save">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#resetAll" text="Reset">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children></HBox>
+      <HBox prefHeight="32.0" prefWidth="672.0" spacing="5.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="32.0" prefWidth="105.0" />
+            <Label fx:id="lblAmountWarning">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children></HBox>
+      <HBox prefHeight="26.0" prefWidth="672.0" />
+      <HBox alignment="BOTTOM_RIGHT" prefHeight="12.0" prefWidth="600.0">
+         <children>
+            <Label text="Trip Planner App Made By: Monica Bacatan   ">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</VBox>
