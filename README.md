@@ -57,6 +57,13 @@ Configuring the project in IntelliJ:
 - In IntelliJ, go to: File > Project Settings > Modules
 - In the *Dependencies* tab, select SDK 1.8
 
+Configuring the SDK:
+- In IntelliJ:
+  - File > Project Structure > Project Settings > Project
+    - Use SDK: 1.8
+    - Language level: 8 - Lambdas, type annotations etc.
+  - File > Project Structure > Project Settings > Modules
+    - Use SDK: 1.8
 
 ### Running the project:
 1. In IntelliJ, open the Main.java file
