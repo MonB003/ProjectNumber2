@@ -1,5 +1,5 @@
 /* Project Number 2 Controller class
-By: Monica Bacatan
+By: Monica 
  */
 
 package sample;

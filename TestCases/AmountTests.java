@@ -1,5 +1,5 @@
 /* Project Number 2 Amount test class
-By: Monica Bacatan
+By: Monica 
  */
 
 import org.junit.Assert;

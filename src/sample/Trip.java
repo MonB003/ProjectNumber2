@@ -1,5 +1,5 @@
 /* Project Number 2 Trip class
-By: Monica Bacatan
+By: Monica 
  */
 
 package sample;
